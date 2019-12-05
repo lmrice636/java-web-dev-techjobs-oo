@@ -29,8 +29,23 @@ public class Job {
     }
 
     public String toString() {
-        return " " + name + " ";
+
+
+
+        String returnString = '\n' +
+                "ID: " + id + '\n' +
+                "Name: " + name + '\n' +
+                "Employer: " + employer.getValue() + '\n' +
+                "Location: " + location.getValue() + '\n' +
+                "Position Type: " + positionType.getValue() + '\n' +
+                "Core Competency: " + coreCompetency.getValue() +
+                '\n';
+
+        returnString = returnString.replace(": \n", ": Data not available \n");
+
+        return returnString;
     }
+
 
 
 
